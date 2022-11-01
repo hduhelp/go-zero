@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/zeromicro/go-zero/core/lang"
-	"github.com/zeromicro/go-zero/core/trace"
+	"github.com/hduhelp/go-zero/core/lang"
+	"github.com/hduhelp/go-zero/core/trace"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"

@@ -3,7 +3,7 @@ package gogen
 import (
 	"fmt"
 
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
+	"github.com/hduhelp/go-zero/tools/goctl/util/pathx"
 )
 
 const (

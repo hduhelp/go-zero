@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	ztrace "github.com/zeromicro/go-zero/core/trace"
-	"github.com/zeromicro/go-zero/rest/chain"
+	ztrace "github.com/hduhelp/go-zero/core/trace"
+	"github.com/hduhelp/go-zero/rest/chain"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/trace"

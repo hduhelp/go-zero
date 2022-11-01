@@ -4,9 +4,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/zeromicro/go-zero/core/collection"
-	"github.com/zeromicro/go-zero/core/lang"
-	"github.com/zeromicro/go-zero/core/threading"
+	"github.com/hduhelp/go-zero/core/collection"
+	"github.com/hduhelp/go-zero/core/lang"
+	"github.com/hduhelp/go-zero/core/threading"
 )
 
 const (

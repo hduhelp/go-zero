@@ -8,21 +8,21 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/hduhelp/go-zero/tools/goctl/api"
+	"github.com/hduhelp/go-zero/tools/goctl/bug"
+	"github.com/hduhelp/go-zero/tools/goctl/docker"
+	"github.com/hduhelp/go-zero/tools/goctl/env"
+	"github.com/hduhelp/go-zero/tools/goctl/internal/version"
+	"github.com/hduhelp/go-zero/tools/goctl/kube"
+	"github.com/hduhelp/go-zero/tools/goctl/migrate"
+	"github.com/hduhelp/go-zero/tools/goctl/model"
+	"github.com/hduhelp/go-zero/tools/goctl/quickstart"
+	"github.com/hduhelp/go-zero/tools/goctl/rpc"
+	"github.com/hduhelp/go-zero/tools/goctl/tpl"
+	"github.com/hduhelp/go-zero/tools/goctl/upgrade"
 	"github.com/logrusorgru/aurora"
 	"github.com/spf13/cobra"
 	"github.com/withfig/autocomplete-tools/integrations/cobra"
-	"github.com/zeromicro/go-zero/tools/goctl/api"
-	"github.com/zeromicro/go-zero/tools/goctl/bug"
-	"github.com/zeromicro/go-zero/tools/goctl/docker"
-	"github.com/zeromicro/go-zero/tools/goctl/env"
-	"github.com/zeromicro/go-zero/tools/goctl/internal/version"
-	"github.com/zeromicro/go-zero/tools/goctl/kube"
-	"github.com/zeromicro/go-zero/tools/goctl/migrate"
-	"github.com/zeromicro/go-zero/tools/goctl/model"
-	"github.com/zeromicro/go-zero/tools/goctl/quickstart"
-	"github.com/zeromicro/go-zero/tools/goctl/rpc"
-	"github.com/zeromicro/go-zero/tools/goctl/tpl"
-	"github.com/zeromicro/go-zero/tools/goctl/upgrade"
 )
 
 const (
@@ -40,7 +40,7 @@ var (
 		Use:   "goctl",
 		Short: "A cli tool to generate go-zero code",
 		Long: "A cli tool to generate api, zrpc, model code\n\n" +
-			"GitHub: https://github.com/zeromicro/go-zero\n" +
+			"GitHub: https://github.com/hduhelp/go-zero\n" +
 			"Site:   https://go-zero.dev",
 	}
 )

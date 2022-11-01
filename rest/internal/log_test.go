@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/hduhelp/go-zero/core/logx"
 )
 
 func TestInfo(t *testing.T) {

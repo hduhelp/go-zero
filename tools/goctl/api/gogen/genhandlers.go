@@ -6,12 +6,12 @@ import (
 	"path"
 	"strings"
 
-	"github.com/zeromicro/go-zero/tools/goctl/api/spec"
-	"github.com/zeromicro/go-zero/tools/goctl/config"
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/golang"
-	"github.com/zeromicro/go-zero/tools/goctl/util"
-	"github.com/zeromicro/go-zero/tools/goctl/util/format"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
+	"github.com/hduhelp/go-zero/tools/goctl/api/spec"
+	"github.com/hduhelp/go-zero/tools/goctl/config"
+	"github.com/hduhelp/go-zero/tools/goctl/pkg/golang"
+	"github.com/hduhelp/go-zero/tools/goctl/util"
+	"github.com/hduhelp/go-zero/tools/goctl/util/format"
+	"github.com/hduhelp/go-zero/tools/goctl/util/pathx"
 )
 
 const defaultLogicPackage = "logic"

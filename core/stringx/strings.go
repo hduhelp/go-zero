@@ -3,7 +3,7 @@ package stringx
 import (
 	"errors"
 
-	"github.com/zeromicro/go-zero/core/lang"
+	"github.com/hduhelp/go-zero/core/lang"
 )
 
 var (

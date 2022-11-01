@@ -1,6 +1,6 @@
-module github.com/zeromicro/go-zero
+module github.com/hduhelp/go-zero
 
-go 1.16
+go 1.19
 
 require (
 	github.com/ClickHouse/clickhouse-go/v2 v2.0.14

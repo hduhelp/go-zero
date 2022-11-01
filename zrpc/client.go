@@ -4,9 +4,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/zeromicro/go-zero/zrpc/internal"
-	"github.com/zeromicro/go-zero/zrpc/internal/auth"
-	"github.com/zeromicro/go-zero/zrpc/internal/clientinterceptors"
+	"github.com/hduhelp/go-zero/zrpc/internal"
+	"github.com/hduhelp/go-zero/zrpc/internal/auth"
+	"github.com/hduhelp/go-zero/zrpc/internal/clientinterceptors"
 	"google.golang.org/grpc"
 )
 

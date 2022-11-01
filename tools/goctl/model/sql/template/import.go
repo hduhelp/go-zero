@@ -10,11 +10,11 @@ const (
 	{{if .time}}"time"{{end}}
 
 	{{if .containsPQ}}"github.com/lib/pq"{{end}}
-	"github.com/zeromicro/go-zero/core/stores/builder"
-	"github.com/zeromicro/go-zero/core/stores/cache"
-	"github.com/zeromicro/go-zero/core/stores/sqlc"
-	"github.com/zeromicro/go-zero/core/stores/sqlx"
-	"github.com/zeromicro/go-zero/core/stringx"
+	"github.com/hduhelp/go-zero/core/stores/builder"
+	"github.com/hduhelp/go-zero/core/stores/cache"
+	"github.com/hduhelp/go-zero/core/stores/sqlc"
+	"github.com/hduhelp/go-zero/core/stores/sqlx"
+	"github.com/hduhelp/go-zero/core/stringx"
 )
 `
 	// ImportsNoCache defines a import template for model in normal case
@@ -26,10 +26,10 @@ const (
 	{{if .time}}"time"{{end}}
 
     {{if .containsPQ}}"github.com/lib/pq"{{end}}
-	"github.com/zeromicro/go-zero/core/stores/builder"
-	"github.com/zeromicro/go-zero/core/stores/sqlc"
-	"github.com/zeromicro/go-zero/core/stores/sqlx"
-	"github.com/zeromicro/go-zero/core/stringx"
+	"github.com/hduhelp/go-zero/core/stores/builder"
+	"github.com/hduhelp/go-zero/core/stores/sqlc"
+	"github.com/hduhelp/go-zero/core/stores/sqlx"
+	"github.com/hduhelp/go-zero/core/stringx"
 )
 `
 )

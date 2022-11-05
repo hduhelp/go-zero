@@ -129,6 +129,8 @@ func init() {
 		"the remote repo, it does work with --remote")
 	goCmd.Flags().StringVar(&gogen.VarStringStyle, "style", "gozero", "The file naming format,"+
 		" see [https://github.com/hduhelp/go-zero/blob/master/tools/goctl/config/readme.md]")
+	goCmd.Flags().BoolVarP(&gogen.VarBoolGin, "gin", "g", false,
+		"Generated with gin framework")
 
 	javaCmd.Flags().StringVar(&javagen.VarStringDir, "dir", "", "The target dir")
 	javaCmd.Flags().StringVar(&javagen.VarStringAPI, "api", "", "The api file")

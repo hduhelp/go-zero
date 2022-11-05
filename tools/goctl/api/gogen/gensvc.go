@@ -17,7 +17,7 @@ const contextFilename = "service_context"
 //go:embed svc.tpl
 var contextTemplate string
 
-func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec) error {
+func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec, useGin bool) error {
 	filename, err := format.FileNamingFormat(cfg.NamingFormat, contextFilename)
 	if err != nil {
 		return err
@@ -28,7 +28,11 @@ func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpe
 	middlewares := getMiddleware(api)
 
 	for _, item := range middlewares {
-		middlewareStr += fmt.Sprintf("%s rest.Middleware\n", item)
+		if useGin {
+			middlewareStr += fmt.Sprintf("%s gin.HandlerFunc\n", item)
+		} else {
+			middlewareStr += fmt.Sprintf("%s rest.Middleware\n", item)
+		}
 		name := strings.TrimSuffix(item, "Middleware") + "Middleware"
 		middlewareAssignment += fmt.Sprintf("%s: %s,\n", item,
 			fmt.Sprintf("middleware.New%s().%s", strings.Title(name), "Handle"))
@@ -37,7 +41,11 @@ func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpe
 	configImport := "\"" + pathx.JoinPackages(rootPkg, configDir) + "\""
 	if len(middlewareStr) > 0 {
 		configImport += "\n\t\"" + pathx.JoinPackages(rootPkg, middlewareDir) + "\""
-		configImport += fmt.Sprintf("\n\t\"%s/rest\"", vars.ProjectOpenSourceURL)
+		if !useGin {
+			configImport += fmt.Sprintf("\n\t\"%s/rest\"", vars.ProjectOpenSourceURL)
+		} else {
+			configImport += "\n\"github.com/gin-gonic/gin\""
+		}
 	}
 
 	return genFile(fileGenConfig{
@@ -48,11 +56,12 @@ func genServiceContext(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpe
 		category:        category,
 		templateFile:    contextTemplateFile,
 		builtinTemplate: contextTemplate,
-		data: map[string]string{
+		data: map[string]any{
 			"configImport":         configImport,
 			"config":               "config.Config",
 			"middleware":           middlewareStr,
 			"middlewareAssignment": middlewareAssignment,
+			"useGin":               useGin,
 		},
 	})
 }

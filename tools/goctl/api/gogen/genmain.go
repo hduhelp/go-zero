@@ -15,7 +15,13 @@ import (
 //go:embed main.tpl
 var mainTemplate string
 
-func genMain(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec) error {
+type mainInfo struct {
+	ImportPackages string
+	ServiceName    string
+	UseGin         bool
+}
+
+func genMain(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec, usegin bool) error {
 	name := strings.ToLower(api.Service.Name)
 	filename, err := format.FileNamingFormat(cfg.NamingFormat, name)
 	if err != nil {
@@ -35,9 +41,10 @@ func genMain(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec) error {
 		category:        category,
 		templateFile:    mainTemplateFile,
 		builtinTemplate: mainTemplate,
-		data: map[string]string{
-			"importPackages": genMainImports(rootPkg),
-			"serviceName":    configName,
+		data: mainInfo{
+			ImportPackages: genMainImports(rootPkg),
+			ServiceName:    configName,
+			UseGin:         usegin,
 		},
 	})
 }

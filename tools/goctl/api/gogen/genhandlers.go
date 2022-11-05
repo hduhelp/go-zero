@@ -30,9 +30,10 @@ type handlerInfo struct {
 	Call               string
 	HasResp            bool
 	HasRequest         bool
+	UseGin             bool
 }
 
-func genHandler(dir, rootPkg string, cfg *config.Config, group spec.Group, route spec.Route) error {
+func genHandler(dir, rootPkg string, cfg *config.Config, group spec.Group, route spec.Route, UseGin bool) error {
 	handler := getHandlerName(route)
 	handlerPath := getHandlerFolderPath(group, route)
 	pkgName := handlerPath[strings.LastIndex(handlerPath, "/")+1:]
@@ -56,6 +57,7 @@ func genHandler(dir, rootPkg string, cfg *config.Config, group spec.Group, route
 		Call:           strings.Title(strings.TrimSuffix(handler, "Handler")),
 		HasResp:        len(route.ResponseTypeName()) > 0,
 		HasRequest:     len(route.RequestTypeName()) > 0,
+		UseGin:         UseGin,
 	})
 }
 
@@ -79,10 +81,10 @@ func doGenToFile(dir, handler string, cfg *config.Config, group spec.Group,
 	})
 }
 
-func genHandlers(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec) error {
+func genHandlers(dir, rootPkg string, cfg *config.Config, api *spec.ApiSpec, useGin bool) error {
 	for _, group := range api.Service.Groups {
 		for _, route := range group.Routes {
-			if err := genHandler(dir, rootPkg, cfg, group, route); err != nil {
+			if err := genHandler(dir, rootPkg, cfg, group, route, useGin); err != nil {
 				return err
 			}
 		}

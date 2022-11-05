@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	{{.importPackages}}
+	{{.ImportPackages}}
 )
 
-var configFile = flag.String("f", "etc/{{.serviceName}}.yaml", "the config file")
+var configFile = flag.String("f", "etc/{{.ServiceName}}.yaml", "the config file")
 
 func main() {
 	flag.Parse()
@@ -15,7 +15,7 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
-	server := rest.MustNewServer(c.RestConf)
+	{{if .UseGin}}server := rest.MustNewGinServer(c.RestConf){{else}}server := rest.MustNewServer(c.RestConf){{end}}
 	defer server.Stop()
 
 	ctx := svc.NewServiceContext(c)

@@ -39,6 +39,8 @@ var (
 	VarStringBranch string
 	// VarStringStyle describes the style of output files.
 	VarStringStyle string
+	// VarBoolGin describes the gin framework.
+	VarBoolGin bool
 )
 
 // GoCommand gen go project files from command line
@@ -49,6 +51,7 @@ func GoCommand(_ *cobra.Command, _ []string) error {
 	home := VarStringHome
 	remote := VarStringRemote
 	branch := VarStringBranch
+	useGin := VarBoolGin
 	if len(remote) > 0 {
 		repo, _ := util.CloneIntoGitHome(remote, branch)
 		if len(repo) > 0 {
@@ -66,11 +69,11 @@ func GoCommand(_ *cobra.Command, _ []string) error {
 		return errors.New("missing -dir")
 	}
 
-	return DoGenProject(apiFile, dir, namingStyle)
+	return DoGenProject(apiFile, dir, namingStyle, useGin)
 }
 
 // DoGenProject gen go project files with api file
-func DoGenProject(apiFile, dir, style string) error {
+func DoGenProject(apiFile, dir, style string, useGin bool) error {
 	api, err := parser.Parse(apiFile)
 	if err != nil {
 		return err
@@ -93,13 +96,13 @@ func DoGenProject(apiFile, dir, style string) error {
 
 	logx.Must(genEtc(dir, cfg, api))
 	logx.Must(genConfig(dir, cfg, api))
-	logx.Must(genMain(dir, rootPkg, cfg, api))
-	logx.Must(genServiceContext(dir, rootPkg, cfg, api))
+	logx.Must(genMain(dir, rootPkg, cfg, api, useGin))
+	logx.Must(genServiceContext(dir, rootPkg, cfg, api, useGin))
 	logx.Must(genTypes(dir, cfg, api))
-	logx.Must(genRoutes(dir, rootPkg, cfg, api))
-	logx.Must(genHandlers(dir, rootPkg, cfg, api))
+	logx.Must(genRoutes(dir, rootPkg, cfg, api, useGin))
+	logx.Must(genHandlers(dir, rootPkg, cfg, api, useGin))
 	logx.Must(genLogic(dir, rootPkg, cfg, api))
-	logx.Must(genMiddleware(dir, cfg, api))
+	logx.Must(genMiddleware(dir, cfg, api, useGin))
 
 	if err := backupAndSweep(apiFile); err != nil {
 		return err

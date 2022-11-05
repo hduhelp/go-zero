@@ -12,7 +12,7 @@ import (
 //go:embed middleware.tpl
 var middlewareImplementCode string
 
-func genMiddleware(dir string, cfg *config.Config, api *spec.ApiSpec) error {
+func genMiddleware(dir string, cfg *config.Config, api *spec.ApiSpec, useGin bool) error {
 	middlewares := getMiddleware(api)
 	for _, item := range middlewares {
 		middlewareFilename := strings.TrimSuffix(strings.ToLower(item), "middleware") + "_middleware"
@@ -30,8 +30,9 @@ func genMiddleware(dir string, cfg *config.Config, api *spec.ApiSpec) error {
 			category:        category,
 			templateFile:    middlewareImplementCodeFile,
 			builtinTemplate: middlewareImplementCode,
-			data: map[string]string{
-				"name": strings.Title(name),
+			data: map[string]any{
+				"name":   strings.Title(name),
+				"useGin": useGin,
 			},
 		})
 		if err != nil {

@@ -37,8 +37,8 @@ func RegisterHandlers(server *rest.{{if .useGin}}GinServer{{else}}Server{{end}},
 	routesAdditionTemplate = `
 	{{if .useGin}}server.{{.method}}("{{.path}}"{{.middleware}},{{.handler}}){{else}}server.AddRoutes(
 		{{.routes}} {{.jwt}}{{.signature}} {{.prefix}} {{.timeout}}
-	){{end}}
-`
+	)
+{{end}}`
 	timeoutThreshold = time.Millisecond
 )
 
@@ -233,6 +233,7 @@ func genGinRoutes(builder *strings.Builder, groups []group, templateText string)
 			}
 		}
 
+		builder.WriteString("\n")
 	}
 	return hasTimeout, nil
 }

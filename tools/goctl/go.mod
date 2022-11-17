@@ -7,7 +7,6 @@ require (
 	github.com/emicklei/proto v1.10.0
 	github.com/fatih/structtag v1.2.0
 	github.com/go-sql-driver/mysql v1.6.0
-	github.com/zeromicro/go-zero v0.0.0-20221105112241-ae523e466a6a
 	github.com/iancoleman/strcase v0.2.0
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/spf13/cobra v1.4.0
@@ -15,6 +14,7 @@ require (
 	github.com/withfig/autocomplete-tools/integrations/cobra v0.0.0-20220705165518-2761d7f4b8bc
 	github.com/zeromicro/antlr v0.0.1
 	github.com/zeromicro/ddl-parser v1.0.4
+	github.com/zeromicro/go-zero v1.4.2
 	google.golang.org/grpc v1.50.1
 	google.golang.org/protobuf v1.28.1
 )
@@ -41,7 +41,6 @@ require (
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/googleapis/gnostic v0.5.5 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.0 // indirect
-	github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/lib/pq v1.10.7 // indirect

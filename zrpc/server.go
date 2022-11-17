@@ -4,12 +4,12 @@ import (
 	"log"
 	"time"
 
-	"github.com/hduhelp/go-zero/core/load"
-	"github.com/hduhelp/go-zero/core/logx"
-	"github.com/hduhelp/go-zero/core/stat"
-	"github.com/hduhelp/go-zero/zrpc/internal"
-	"github.com/hduhelp/go-zero/zrpc/internal/auth"
-	"github.com/hduhelp/go-zero/zrpc/internal/serverinterceptors"
+	"github.com/zeromicro/go-zero/core/load"
+	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/stat"
+	"github.com/zeromicro/go-zero/zrpc/internal"
+	"github.com/zeromicro/go-zero/zrpc/internal/auth"
+	"github.com/zeromicro/go-zero/zrpc/internal/serverinterceptors"
 	"google.golang.org/grpc"
 )
 

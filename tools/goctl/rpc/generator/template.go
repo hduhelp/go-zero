@@ -3,7 +3,7 @@ package generator
 import (
 	"fmt"
 
-	"github.com/hduhelp/go-zero/tools/goctl/util/pathx"
+	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 )
 
 const (

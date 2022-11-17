@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hduhelp/go-zero/core/lang"
+	"github.com/zeromicro/go-zero/core/lang"
 	"github.com/stretchr/testify/assert"
 )
 

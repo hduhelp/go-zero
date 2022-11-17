@@ -14,11 +14,11 @@ import (
 
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
-	"github.com/hduhelp/go-zero/core/stat"
-	"github.com/hduhelp/go-zero/core/stores/cache"
-	"github.com/hduhelp/go-zero/core/stores/mongo"
-	"github.com/hduhelp/go-zero/core/stores/redis"
-	"github.com/hduhelp/go-zero/core/stores/redis/redistest"
+	"github.com/zeromicro/go-zero/core/stat"
+	"github.com/zeromicro/go-zero/core/stores/cache"
+	"github.com/zeromicro/go-zero/core/stores/mongo"
+	"github.com/zeromicro/go-zero/core/stores/redis"
+	"github.com/zeromicro/go-zero/core/stores/redis/redistest"
 	"github.com/stretchr/testify/assert"
 )
 

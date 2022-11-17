@@ -6,9 +6,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/hduhelp/go-zero/tools/goctl/api/spec"
-	apiutil "github.com/hduhelp/go-zero/tools/goctl/api/util"
-	"github.com/hduhelp/go-zero/tools/goctl/util/pathx"
+	"github.com/zeromicro/go-zero/tools/goctl/api/spec"
+	apiutil "github.com/zeromicro/go-zero/tools/goctl/api/util"
+	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 )
 
 //go:embed components.tpl

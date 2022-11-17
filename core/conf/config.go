@@ -7,7 +7,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/hduhelp/go-zero/core/mapping"
+	"github.com/zeromicro/go-zero/core/mapping"
 )
 
 var loaders = map[string]func([]byte, interface{}) error{

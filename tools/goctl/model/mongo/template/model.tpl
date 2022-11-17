@@ -5,7 +5,7 @@ import (
     "context"
     "time"
 
-    {{if .Cache}}"github.com/hduhelp/go-zero/core/stores/monc"{{else}}"github.com/hduhelp/go-zero/core/stores/mon"{{end}}
+    {{if .Cache}}"github.com/zeromicro/go-zero/core/stores/monc"{{else}}"github.com/zeromicro/go-zero/core/stores/mon"{{end}}
     "go.mongodb.org/mongo-driver/bson"
     "go.mongodb.org/mongo-driver/bson/primitive"
 )

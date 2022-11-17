@@ -4,9 +4,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/hduhelp/go-zero/core/stat"
-	"github.com/hduhelp/go-zero/zrpc/internal/mock"
 	"github.com/stretchr/testify/assert"
+	"github.com/zeromicro/go-zero/core/stat"
+	"github.com/zeromicro/go-zero/zrpc/internal/mock"
 	"google.golang.org/grpc"
 )
 

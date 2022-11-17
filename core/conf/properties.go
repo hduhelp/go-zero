@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hduhelp/go-zero/core/iox"
+	"github.com/zeromicro/go-zero/core/iox"
 )
 
 // PropertyError represents a configuration error message.

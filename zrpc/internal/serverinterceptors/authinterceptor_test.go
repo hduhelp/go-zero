@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/hduhelp/go-zero/core/stores/redis/redistest"
-	"github.com/hduhelp/go-zero/zrpc/internal/auth"
+	"github.com/zeromicro/go-zero/core/stores/redis/redistest"
+	"github.com/zeromicro/go-zero/zrpc/internal/auth"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

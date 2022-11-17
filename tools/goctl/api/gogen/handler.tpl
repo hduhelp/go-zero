@@ -3,7 +3,7 @@ package {{.PkgName}}
 import (
 	{{if .UseGin}}"github.com/gin-gonic/gin"{{else}}"net/http"{{end}}
 
-	"github.com/hduhelp/go-zero/rest/{{if .UseGin}}httpg{{else}}httpx{{end}}"
+	"github.com/zeromicro/go-zero/rest/{{if .UseGin}}httpg{{else}}httpx{{end}}"
 	{{.ImportPackages}}
 )
 

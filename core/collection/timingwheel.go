@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hduhelp/go-zero/core/lang"
-	"github.com/hduhelp/go-zero/core/threading"
-	"github.com/hduhelp/go-zero/core/timex"
+	"github.com/zeromicro/go-zero/core/lang"
+	"github.com/zeromicro/go-zero/core/threading"
+	"github.com/zeromicro/go-zero/core/timex"
 )
 
 const drainWorkers = 8

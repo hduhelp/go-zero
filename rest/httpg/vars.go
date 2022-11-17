@@ -1,6 +1,6 @@
 package httpg
 
-import "github.com/hduhelp/go-zero/rest/internal/header"
+import "github.com/zeromicro/go-zero/rest/internal/header"
 
 const (
 	// ContentEncoding means Content-Encoding.

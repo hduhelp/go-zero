@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hduhelp/go-zero/tools/goctl/model/sql/template"
-	"github.com/hduhelp/go-zero/tools/goctl/util/pathx"
+	"github.com/zeromicro/go-zero/tools/goctl/model/sql/template"
+	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hduhelp/go-zero/tools/goctl/internal/version"
+	"github.com/zeromicro/go-zero/tools/goctl/internal/version"
 	"github.com/logrusorgru/aurora"
 )
 

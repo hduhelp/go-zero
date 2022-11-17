@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hduhelp/go-zero/core/jsonx"
-	"github.com/hduhelp/go-zero/core/logx"
-	"github.com/hduhelp/go-zero/core/mathx"
-	"github.com/hduhelp/go-zero/core/stat"
-	"github.com/hduhelp/go-zero/core/stores/redis"
-	"github.com/hduhelp/go-zero/core/syncx"
+	"github.com/zeromicro/go-zero/core/jsonx"
+	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/mathx"
+	"github.com/zeromicro/go-zero/core/stat"
+	"github.com/zeromicro/go-zero/core/stores/redis"
+	"github.com/zeromicro/go-zero/core/syncx"
 )
 
 const (

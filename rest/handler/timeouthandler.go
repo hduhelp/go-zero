@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hduhelp/go-zero/rest/httpx"
-	"github.com/hduhelp/go-zero/rest/internal"
+	"github.com/zeromicro/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/internal"
 )
 
 const (

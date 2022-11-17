@@ -1,6 +1,6 @@
 package sqlx
 
-import "github.com/hduhelp/go-zero/core/metric"
+import "github.com/zeromicro/go-zero/core/metric"
 
 const namespace = "sql_client"
 

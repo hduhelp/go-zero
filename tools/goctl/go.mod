@@ -1,4 +1,4 @@
-module github.com/hduhelp/go-zero/tools/goctl
+module github.com/zeromicro/go-zero/tools/goctl
 
 go 1.19
 
@@ -7,7 +7,7 @@ require (
 	github.com/emicklei/proto v1.10.0
 	github.com/fatih/structtag v1.2.0
 	github.com/go-sql-driver/mysql v1.6.0
-	github.com/hduhelp/go-zero v0.0.0-20221105112241-ae523e466a6a
+	github.com/zeromicro/go-zero v0.0.0-20221105112241-ae523e466a6a
 	github.com/iancoleman/strcase v0.2.0
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/spf13/cobra v1.4.0

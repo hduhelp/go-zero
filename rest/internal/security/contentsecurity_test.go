@@ -15,10 +15,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hduhelp/go-zero/core/codec"
-	"github.com/hduhelp/go-zero/core/fs"
-	"github.com/hduhelp/go-zero/rest/httpx"
 	"github.com/stretchr/testify/assert"
+	"github.com/zeromicro/go-zero/core/codec"
+	"github.com/zeromicro/go-zero/core/fs"
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 const (

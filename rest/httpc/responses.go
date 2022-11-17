@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/hduhelp/go-zero/core/mapping"
-	"github.com/hduhelp/go-zero/rest/internal/encoding"
-	"github.com/hduhelp/go-zero/rest/internal/header"
+	"github.com/zeromicro/go-zero/core/mapping"
+	"github.com/zeromicro/go-zero/rest/internal/encoding"
+	"github.com/zeromicro/go-zero/rest/internal/header"
 )
 
 // Parse parses the response.

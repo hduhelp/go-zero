@@ -3,8 +3,8 @@ package discov
 import (
 	"testing"
 
-	"github.com/hduhelp/go-zero/core/discov/internal"
-	"github.com/hduhelp/go-zero/core/stringx"
+	"github.com/zeromicro/go-zero/core/discov/internal"
+	"github.com/zeromicro/go-zero/core/stringx"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -1,4 +1,4 @@
-module github.com/hduhelp/go-zero
+module github.com/zeromicro/go-zero
 
 go 1.19
 

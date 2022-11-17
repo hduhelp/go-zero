@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hduhelp/go-zero/rest/internal"
+	"github.com/zeromicro/go-zero/rest/internal"
 	"github.com/stretchr/testify/assert"
 )
 

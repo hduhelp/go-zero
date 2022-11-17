@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hduhelp/go-zero/tools/goctl/api/parser"
-	"github.com/hduhelp/go-zero/tools/goctl/util/pathx"
+	"github.com/zeromicro/go-zero/tools/goctl/api/parser"
+	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 	"github.com/spf13/cobra"
 )
 

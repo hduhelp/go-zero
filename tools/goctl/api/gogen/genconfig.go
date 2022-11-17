@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hduhelp/go-zero/tools/goctl/api/spec"
-	"github.com/hduhelp/go-zero/tools/goctl/config"
-	"github.com/hduhelp/go-zero/tools/goctl/util/format"
-	"github.com/hduhelp/go-zero/tools/goctl/vars"
+	"github.com/zeromicro/go-zero/tools/goctl/api/spec"
+	"github.com/zeromicro/go-zero/tools/goctl/config"
+	"github.com/zeromicro/go-zero/tools/goctl/util/format"
+	"github.com/zeromicro/go-zero/tools/goctl/vars"
 )
 
 const (

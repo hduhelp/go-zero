@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hduhelp/go-zero/tools/goctl/util/stringx"
+	"github.com/zeromicro/go-zero/tools/goctl/util/stringx"
 )
 
 var (
 	ErrInvalidKVExpression = errors.New(`invalid key-value expression`)
-	ErrInvalidKVS          = errors.New("the length of kv must be an even number")
+revert dependency	ErrInvalidKVS          = errors.New("the length of kv must be an even number")
 )
 
 type KV []interface{}

@@ -3,7 +3,7 @@ package rest
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/hduhelp/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 	"log"
 )
 

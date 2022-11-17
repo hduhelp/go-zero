@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/globalsign/mgo"
-	"github.com/hduhelp/go-zero/core/breaker"
+	"github.com/zeromicro/go-zero/core/breaker"
 )
 
 type (

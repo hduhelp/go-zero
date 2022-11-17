@@ -8,12 +8,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/hduhelp/go-zero/tools/goctl/pkg/downloader"
-	"github.com/hduhelp/go-zero/tools/goctl/pkg/goctl"
-	"github.com/hduhelp/go-zero/tools/goctl/rpc/execx"
-	"github.com/hduhelp/go-zero/tools/goctl/util/env"
-	"github.com/hduhelp/go-zero/tools/goctl/util/zipx"
-	"github.com/hduhelp/go-zero/tools/goctl/vars"
+	"github.com/zeromicro/go-zero/tools/goctl/pkg/downloader"
+	"github.com/zeromicro/go-zero/tools/goctl/pkg/goctl"
+	"github.com/zeromicro/go-zero/tools/goctl/rpc/execx"
+	"github.com/zeromicro/go-zero/tools/goctl/util/env"
+	"github.com/zeromicro/go-zero/tools/goctl/util/zipx"
+	"github.com/zeromicro/go-zero/tools/goctl/vars"
 )
 
 var url = map[string]string{

@@ -7,7 +7,6 @@ import (
 	"sync"
 
 	"github.com/hduhelp/go-zero/core/lang"
-	"github.com/hduhelp/go-zero/core/mapping"
 )
 
 const (
@@ -183,5 +182,5 @@ func innerRepr(node interface{}) string {
 }
 
 func repr(node interface{}) string {
-	return mapping.Repr(node)
+	return lang.Repr(node)
 }

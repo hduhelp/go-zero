@@ -1,13 +1,4 @@
-package template
-
-import (
-	"fmt"
-
-	"github.com/hduhelp/go-zero/tools/goctl/util"
-)
-
-// ModelCustom defines a template for extension
-const ModelCustom = `package {{.pkg}}
+package {{.pkg}}
 {{if .withCache}}
 import (
 	"github.com/hduhelp/go-zero/core/stores/cache"
@@ -15,7 +6,7 @@ import (
 )
 {{else}}
 
-import "github.com/hduhelp/go-zero/core/stores/sqlx"
+import "github.com/zeromicro/go-zero/core/stores/sqlx"
 {{end}}
 var _ {{.upperStartCamelObject}}Model = (*custom{{.upperStartCamelObject}}Model)(nil)
 
@@ -37,20 +28,3 @@ func New{{.upperStartCamelObject}}Model(conn sqlx.SqlConn{{if .withCache}}, c ca
 		default{{.upperStartCamelObject}}Model: new{{.upperStartCamelObject}}Model(conn{{if .withCache}}, c{{end}}),
 	}
 }
-`
-
-// ModelGen defines a template for model
-var ModelGen = fmt.Sprintf(`%s
-
-package {{.pkg}}
-{{.imports}}
-{{.vars}}
-{{.types}}
-{{.new}}
-{{.delete}}
-{{.find}}
-{{.insert}}
-{{.update}}
-{{.extraMethod}}
-{{.tableName}}
-`, util.DoNotEditHead)

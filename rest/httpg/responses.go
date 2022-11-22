@@ -21,9 +21,14 @@ func Error(c *gin.Context, err error) {
 	handler := errorHandler
 	lock.RUnlock()
 
+	if handler == nil {
+		c.String(http.StatusInternalServerError, err.Error())
+		return
+	}
+
 	handler(c, err)
 	if c.Writer.Written() == false {
-		c.AbortWithStatus(http.StatusInternalServerError)
+		c.String(http.StatusInternalServerError, err.Error())
 		return
 	}
 }

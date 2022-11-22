@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/zeromicro/go-zero/tools/goctl/util"
+	"github.com/hduhelp/go-zero/tools/goctl/util"
 )
 
 // Vars defines a template for var block in model
